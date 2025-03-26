@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import "./header.css";
 import { Link } from "react-router";
+
 import { useAuth } from "../../../Services/Context/AuthContext";
 const ClientHeader = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { user } = useAuth();
+  const [mobileMenu, setMobileMenu] = useState(false);
+  
   return (
     <div>
       <header>
         <Link to={"/"} className="logo">
-          Rz. Laman
+          Car Rental Services
         </Link>
         <nav>
           <ul>
@@ -40,6 +43,8 @@ const ClientHeader = () => {
           </ul>
         </div>
       </header>
+     
+
     </div>
   );
 };
