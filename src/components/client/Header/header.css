@@ -1,0 +1,59 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 1.6rem;
+    background: #000;
+  }
+  header .logo {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header ul {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 2rem;
+  }
+  header ul li a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .user-profile {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .user-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 0.8rem;
+    position: absolute;
+    top: 110%;
+    left: -20%;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    z-index: 999;
+    opacity: none;
+    visibility: hidden;
+  }
+  .user-content.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .user-profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }

@@ -1,0 +1,136 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "brand": "BMW",
+        "model": "X5",
+        "year": 2024,
+        "color": "Black"
+      },
+      {
+        "id": 2,
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2023,
+        "color": "White"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "name": "Orxan",
+        "email": "orxan@example.com",
+        "password": "orxan1997@",
+        "role": "client",
+        "isBanned": "false"
+      },
+      {
+        "id": 2,
+        "name": "Murad",
+        "email": "murad@example.com",
+        "password": "murad2000@",
+        "role": "client",
+        "isBanned": "false"
+      },
+      {
+        "id": 3,
+        "name": "Leyla",
+        "email": "leyla@example.com",
+        "password": "leyla1995@",
+        "role": "client",
+        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+        "isBanned": "false"
+      },
+      {
+        "id": 4,
+        "name": "Elvin",
+        "email": "elvin@example.com",
+        "password": "elvin1992@",
+        "role": "client",
+        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+        "isBanned": "false"
+      },
+      {
+        "id": 5,
+        "name": "Nigar",
+        "email": "nigar@example.com",
+        "password": "nigar1998@",
+        "role": "client",
+        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+        "isBanned": "false"
+      },
+      {
+        "id": 6,
+        "name": "Ramil",
+        "email": "ramil@example.com",
+        "password": "ramil1993@",
+        "role": "client",
+        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+        "isBanned": "false"
+      },
+      {
+        "id": 7,
+        "name": "Aysel",
+        "email": "aysel@example.com",
+        "password": "aysel1996@",
+        "role": "admin",
+        "isBanned": "false"
+      },
+      {
+        "id": 8,
+        "name": "Tural",
+        "email": "tural@example.com",
+        "password": "tural1994@",
+        "role": "client",
+        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+        "isBanned": "false"
+      }
+    ],
+    "rentals": [
+      {
+        "id": 1,
+        "user_Id": 2,
+        "car_Id": 1,
+        "start_Date": "2025-03-20",
+        "end_Date": "2025-03-25",
+        "total_cost": 100,
+        "status": "active"
+      },
+      {
+        "id": 2,
+        "user_Id": 5,
+        "car_Id": 3,
+        "start_Date": "2025-03-18",
+        "end_Date": "2025-03-22",
+        "total_cost": 80,
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "user_Id": 7,
+        "car_Id": 2,
+        "start_Date": "2025-04-01",
+        "end_Date": "2025-04-10",
+        "total_cost": 200,
+        "status": "upcoming"
+      },
+      {
+        "id": 4,
+        "user_Id": 3,
+        "car_Id": 5,
+        "start_Date": "2025-03-25",
+        "end_Date": "2025-03-30",
+        "total_cost": 120,
+        "status": "active"
+      },
+      {
+        "id": 5,
+        "user_Id": 6,
+        "car_Id": 4,
+        "start_Date": "2025-04-05",
+        "end_Date": "2025-04-15",
+        "total_cost": 150,
+        "status": "upcoming"
+      }
+    ]
+  }
