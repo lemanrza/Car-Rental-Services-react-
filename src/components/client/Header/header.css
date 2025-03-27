@@ -12,15 +12,17 @@ header .logo {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 700;
-  font-family: 'Arial', sans-serif;
-  text-decoration: none;
+  font-family: "Inter Tight";
   transition: color 0.3s ease;
 }
-
+nav {
+  flex: 1;
+}
 nav ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-right: 20px;
+  justify-content: end;
   gap: 2.5rem;
   list-style: none;
 }
@@ -38,8 +40,8 @@ nav ul li a:hover {
 }
 
 .user-profile {
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -65,7 +67,6 @@ nav ul li a:hover {
   border-radius: 8px;
   padding: 0.8rem 0.3rem;
   gap: 0.8rem;
-  /* opacity: 0; */
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
@@ -97,55 +98,3 @@ nav ul li a:hover {
   background-color: #333;
   color: #ffcc00;
 }
-
-.mobile-menu-button {
-  display: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.mobile-menu-button:hover {
-  color: #ffcc00;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  .mobile-menu-button {
-    display: block;
-  }
-
-  .nav.active {
-    display: flex;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #111;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav.active ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav ul li a {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .nav ul li a:hover {
-    color: #ffcc00;
-  }
-}
-
