@@ -1,31 +1,58 @@
-import React, { useState } from "react";
+import React from "react";
 import "./login.css";
-import { Link } from "react-router";
+import { Link, useActionData, useNavigate } from "react-router";
+import { useFormik } from "formik";
+import loginSchema from "../../../validations/loginSchema";
+import AuthController from "../../../Services/api/AuthApi";
+import { useAuth } from "../../../Services/Context/AuthContext";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate=useNavigate()
+  const { login}=useAuth()
+  const loginFormik=useFormik({
+    initialValues: {
+      email: "",
+      password: ""
+    },
+    onSubmit: async(values, actions)=>{
+    const response= await AuthController.login(values);
+    if(!response.isLogged){
+      window.alert(response.message)
+      actions.resetForm()
+    }
+    else {
+      await login(values);
+      if(response.data[0].role=="admin"){
+        navigate("admin");
+      }
+      else if(response.data[0].role=="client"){
+        navigate("/")
+      }
+      actions.resetForm()
+    }
+    },
+    validationSchema: loginSchema
+  })
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Username:", username, "Password:", password);
-  };
 
   return (
   <div className="login-body">
       <div className="login-container">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={loginFormik.handleSubmit}>
         <div className="input-group">
           <label htmlFor="username">Email</label>
           <input
             type="email"
-            id="username"
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+            id="email"
+            placeholder="Enter your email"
+            value={loginFormik.values.email}
+            onChange={loginFormik.handleChange}
+            onBlur={loginFormik.handleBlur}
+            />
+             {loginFormik.errors.email && loginFormik.touched.email && (
+                            <span className="block text-red-300 text-xs pl-2 mt-2">{registerFormik.errors.email}</span>
+                        )}
         </div>
         <div className="input-group">
           <label htmlFor="password">Password</label>
@@ -33,10 +60,13 @@ const Login = () => {
             type="password"
             id="password"
             placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
+            value={loginFormik.values.password}
+            onChange={loginFormik.handleChange}
+            onBlur={loginFormik.handleBlur}
           />
+           {loginFormik.errors.password && loginFormik.touched.password && (
+                            <span className="block text-red-300 text-xs pl-2 mt-2">{registerFormik.errors.password}</span>
+                        )}
         </div>
         <button className="login-button" type="submit">Login</button>
       </form>

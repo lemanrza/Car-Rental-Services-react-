@@ -21,11 +21,11 @@ function AuthProvider({ children }) {
 
     const login = (credentials) => {
         AuthController.login(credentials).then((x) => {
-            if (x.data) {
-                setUser(x.data);
+            if (x.data.length > 0) {
+                setUser(x.data[0]);
                 localStorage.setItem("user", JSON.stringify({
-                    role: user.role,
-                    id: user.id
+                    role: x.data[0].role,
+                    id: x.data[0].id
                 }))
 
             }

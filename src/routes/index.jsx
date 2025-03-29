@@ -18,6 +18,7 @@ import DashBoard from "../pages/admin/DashBoard"
 import UserManagement from "../pages/admin/UserManagement"
 import CarManagement from "../pages/admin/CarManagement"
 import RentalManagement from "../pages/admin/RentalManagement"
+import EditVehicle from "../pages/admin/EditVehicle";
 
 
 const ROUTES = [
@@ -68,6 +69,10 @@ const ROUTES = [
             {
                 path: "carManagement",
                 element: <CarManagement />
+            },
+            {
+                path: "carManagement/:id",
+                element: <EditVehicle />
             },
             {
                 path: "userManagement",

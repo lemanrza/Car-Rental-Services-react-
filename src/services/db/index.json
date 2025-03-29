@@ -1,139 +1,249 @@
 {
-    "cars": [
-      {
-        "id": 1,
-        "brand": "BMW",
-        "model": "X5",
-        "year": 2024,
-        "color": "Black"
-      },
-      {
-        "id": 2,
-        "brand": "Mercedes",
-        "model": "C-Class",
-        "year": 2023,
-        "color": "White"
-      }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "name": "Orxan",
-        "email": "orxan@example.com",
-        "password": "orxan1997@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 2,
-        "name": "Murad",
-        "email": "murad@example.com",
-        "password": "murad2000@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 3,
-        "name": "Leyla",
-        "email": "leyla@example.com",
-        "password": "leyla1995@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 4,
-        "name": "Elvin",
-        "email": "elvin@example.com",
-        "password": "elvin1992@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 5,
-        "name": "Nigar",
-        "email": "nigar@example.com",
-        "password": "nigar1998@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 6,
-        "name": "Ramil",
-        "email": "ramil@example.com",
-        "password": "ramil1993@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 7,
-        "name": "Aysel",
-        "email": "aysel@example.com",
-        "password": "aysel1996@",
-        "role": "admin",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      },
-      {
-        "id": 8,
-        "name": "Tural",
-        "email": "tural@example.com",
-        "password": "tural1994@",
-        "role": "client",
-        "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
-        "isBanned": "false"
-      }
-    ],
-    "rentals": [
-      {
-        "id": 1,
-        "user_Id": 2,
-        "car_Id": 1,
-        "start_Date": "2025-03-20",
-        "end_Date": "2025-03-25",
-        "total_cost": 100,
-        "status": "active"
-      },
-      {
-        "id": 2,
-        "user_Id": 5,
-        "car_Id": 3,
-        "start_Date": "2025-03-18",
-        "end_Date": "2025-03-22",
-        "total_cost": 80,
-        "status": "completed"
-      },
-      {
-        "id": 3,
-        "user_Id": 7,
-        "car_Id": 2,
-        "start_Date": "2025-04-01",
-        "end_Date": "2025-04-10",
-        "total_cost": 200,
-        "status": "upcoming"
-      },
-      {
-        "id": 4,
-        "user_Id": 3,
-        "car_Id": 5,
-        "start_Date": "2025-03-25",
-        "end_Date": "2025-03-30",
-        "total_cost": 120,
-        "status": "active"
-      },
-      {
-        "id": 5,
-        "user_Id": 6,
-        "car_Id": 4,
-        "start_Date": "2025-04-05",
-        "end_Date": "2025-04-15",
-        "total_cost": 150,
-        "status": "upcoming"
-      }
-    ]
-  }
+  "cars": [
+    {
+      "id": "1",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2024,
+      "price": "100",
+      "category": "SUV",
+      "description": "The BMW X5 is a luxury SUV that offers a powerful engine, spacious interior, and advanced technology. Perfect for both city and off-road adventures.",
+      "image": "https://riversrudloffphotography.com/cdn/shop/files/DSC06409_771408fd-0433-4269-9b75-9ce1fe23d46d.jpg?v=1683001228&width=1946"
+    },
+    {
+      "id": "2",
+      "brand": "Mercedes-Benz",
+      "model": "GLE 450",
+      "year": 2023,
+      "price": "90",
+      "category": "SUV",
+      "description": "The GLE 450 combines luxury with performance, featuring a turbocharged engine and a comfortable, elegant cabin for long journeys.",
+      "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202405/merc-gle-2024-095055321-3x4.jpg?VersionId=_CpciQKHk1bb.i07yApo7gVByeVYBDkl"
+    },
+    {
+      "id": "3",
+      "brand": "Audi",
+      "model": "A6",
+      "year": 2022,
+      "price": "85",
+      "category": "Sedan",
+      "description": "The Audi A6 is a premium sedan that blends sophistication with cutting-edge technology and a refined driving experience.",
+      "image": "https://cdn.motor1.com/images/mgl/Y0Jgj6/s3/audi-a6.jpg"
+    },
+    {
+      "id": "4",
+      "brand": "Ford",
+      "model": "F-150",
+      "year": 2024,
+      "price": "50",
+      "category": "Truck",
+      "description": "The Ford F-150 is a legendary pickup truck known for its durability, impressive towing capacity, and modern tech features.",
+      "image": "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/resources/general/new_vehicle_experience/2024/f-150/2024_Ford_F-150_Lariat.jpg"
+    },
+    {
+      "id": "5",
+      "brand": "Porsche",
+      "model": "911 Carrera",
+      "year": 2023,
+      "price": "70",
+      "category": "Convertible",
+      "description": "The Porsche 911 Carrera is an iconic sports car that delivers exhilarating performance, sleek design, and top-down driving excitement.",
+      "image": "https://files.porsche.com/filestore/image/multimedia/none/992-911-carrera-modelimage-sideshot/thumbwhite/4c2d8fc6-4059-11ec-80d3-005056bbdc38.jpg"
+    },
+    {
+      "id": "6",
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2021,
+      "price": "60",
+      "category": "Sedan",
+      "description": "The Toyota Camry is a reliable and fuel-efficient sedan that offers a comfortable ride and a spacious interior for daily commutes.",
+      "image": "https://toyota.scene7.com/is/image/toyota/Camry-2021"
+    },
+    {
+      "id": "7",
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2020,
+      "price": "50",
+      "category": "Sedan",
+      "description": "The Honda Civic is a compact car that combines practicality, efficiency, and sporty handling in a stylish package.",
+      "image": "https://www.honda.com/content/dam/brand/honda/civic-sedan/2020/gallery/exterior/civic-sedan-2020-1.jpg"
+    },
+    {
+      "id": "8",
+      "brand": "Chevrolet",
+      "model": "Silverado",
+      "year": 2024,
+      "price": "55",
+      "category": "Truck",
+      "description": "The Chevrolet Silverado is a rugged and powerful pickup truck built for heavy-duty tasks and long-haul performance.",
+      "image": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/trucks/silverado/02-images/2024-silverado-crew-cab-masthead-01.jpg"
+    },
+    {
+      "id": "9",
+      "brand": "Tesla",
+      "model": "Model S",
+      "year": 2023,
+      "price": "150",
+      "category": "Sedan",
+      "description": "The Tesla Model S is an all-electric sedan that offers long-range capabilities, fast acceleration, and cutting-edge autopilot features.",
+      "image": "https://tesla-cdn.thron.com/delivery/public/image/tesla/03e631dd-cb45-4f5f-aed8-0fdee7c0513b/bvlatuR/std/4096x2560/MS-Social"
+    },
+    {
+      "id": "10",
+      "brand": "Jeep",
+      "model": "Wrangler",
+      "year": 2022,
+      "price": "110",
+      "category": "SUV",
+      "description": "The Jeep Wrangler is a legendary off-road vehicle known for its rugged design, open-air freedom, and unparalleled capability.",
+      "image": "https://www.jeep.com/content/dam/fca-brands/na/jeep/en_us/2022/wrangler/vlp/desktop/2022-wrangler-vlp-desktop.jpg"
+    },
+    {
+      "id": "35cc",
+      "brand": "Hyundai",
+      "model": "IX-35",
+      "year": "2014",
+      "price": "60",
+      "category": "SUV",
+      "description": "The Hyundai ix35 is a stylish and versatile compact SUV designed to deliver comfort and performance. Known for its modern aesthetics, it features sleek lines, a bold front grille, and dynamic LED headlights that give it a confident road presence.",
+      "image": "https://www.netcarshow.com/Hyundai-ix35-2011-wallpaper.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Orxan",
+      "email": "orxan@example.com",
+      "password": "orxan1997@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "2",
+      "name": "Murad",
+      "email": "murad@example.com",
+      "password": "murad2000@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "3",
+      "name": "Leyla",
+      "email": "leyla@example.com",
+      "password": "leyla1995@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "4",
+      "name": "Elvin",
+      "email": "elvin@example.com",
+      "password": "elvin1992@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "5",
+      "name": "Nigar",
+      "email": "nigar@example.com",
+      "password": "nigar1998@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "true",
+      "ban": 3556
+    },
+    {
+      "id": "6",
+      "name": "Ramil",
+      "email": "ramil@example.com",
+      "password": "ramil1993@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "true",
+      "ban": 7156
+    },
+    {
+      "id": "7",
+      "name": "Aysel",
+      "email": "aysel@example.com",
+      "password": "aysel1996@",
+      "role": "admin",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "8",
+      "name": "Tural",
+      "email": "tural@example.com",
+      "password": "tural1994@",
+      "role": "client",
+      "profileImage": "https://image.tmdb.org/t/p/original/ArmV1wqsz5kvwGw91R7BrVaHO4c.jpg",
+      "isBanned": "false"
+    },
+    {
+      "id": "1c61",
+      "name": "laman.rzali",
+      "email": "lamaner@code.edu.az",
+      "password": "Rzali2266",
+      "role": "client",
+      "profileImage": "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg",
+      "isBanned": false
+    }
+  ],
+  "rentals": [
+    {
+      "id": "1",
+      "user_Id": 2,
+      "car_Id": 1,
+      "start_Date": "2025-03-20",
+      "end_Date": "2025-03-25",
+      "total_cost": 100
+    },
+    {
+      "id": "1",
+      "user_Id": 2,
+      "car_Id": 1,
+      "start_Date": "2025-01-20",
+      "end_Date": "2025-03-25",
+      "total_cost": 100
+    },
+    {
+      "id": "2",
+      "user_Id": 5,
+      "car_Id": 3,
+      "start_Date": "2025-03-18",
+      "end_Date": "2025-03-22",
+      "total_cost": 80
+    },
+    {
+      "id": "3",
+      "user_Id": 7,
+      "car_Id": 2,
+      "start_Date": "2025-02-01",
+      "end_Date": "2025-02-10",
+      "total_cost": 200
+    },
+    {
+      "id": "4",
+      "user_Id": 3,
+      "car_Id": 5,
+      "start_Date": "2025-03-25",
+      "end_Date": "2025-03-30",
+      "total_cost": 120
+    },
+    {
+      "id": "5",
+      "user_Id": 6,
+      "car_Id": 4,
+      "start_Date": "2025-04-05",
+      "end_Date": "2025-04-15",
+      "total_cost": 150
+    }
+  ]
+}

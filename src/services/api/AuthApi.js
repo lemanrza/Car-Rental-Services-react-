@@ -7,7 +7,7 @@ async function register(userData) {
         const duplicateEmail = await getByEmail(userData.email)
         if (duplicateEmail) {
             return {
-                message: "have duplicate email",
+                message: "duplicate email",
                 data: null,
 
             }
@@ -22,22 +22,25 @@ async function register(userData) {
 async function login(credentials) {
     try {
         const user = await getByEmail(credentials.email)
-        if (!user) {
+        if (!user || user.length === 0) {
             return {
                 message: "user not found",
+                isLogged: false,
                 data: null,
             }
         }
-        const validUser = user.password == credentials.password;
+        const validUser = user[0].password == credentials.password;
         if (validUser) {
             return {
                 message: "Success ",
+                isLogged: true,
                 data: user
             }
         }
         else {
             return {
                 message: "wrong email or password ",
+                isLogged: false,
                 data: null
             }
         }
