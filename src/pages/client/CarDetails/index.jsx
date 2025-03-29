@@ -25,11 +25,36 @@ const CarDetail = () => {
     setTotalPrice(days * car.price);
   };
 
+  // const handleRent = () => {
+  //   // alert(`Successfully rented for ${rentalDays} days. Total cost: £${totalPrice}`);
+  //   setIsModalOpen(false);
+  //   setRentalDays(0)
+  // };
+
   const handleRent = () => {
-    // alert(`Successfully rented for ${rentalDays} days. Total cost: £${totalPrice}`);
-    setIsModalOpen(false);
-    setRentalDays(0)
+    const rentalData = {
+      userId: "12345", // Replace with actual user ID
+      carId: car.id,
+      rentalDays: rentalDays,
+      totalPrice: totalPrice,
+      approved: false,
+    };
+  
+    fetch("http://localhost:3000/rentals", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(rentalData),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        alert("Car rental request submitted!");
+        setIsModalOpen(false);
+        setRentalDays(1);
+      });
   };
+  
 
   if (!car) {
     return <div className="text-center text-2xl mt-10">Loading...</div>;

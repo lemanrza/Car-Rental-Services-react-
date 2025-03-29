@@ -1,9 +1,9 @@
 import React from "react";
 import "./login.css";
-import { Link, useActionData, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useFormik } from "formik";
 import loginSchema from "../../../validations/loginSchema";
-import AuthController from "../../../Services/api/AuthApi";
+import AuthController from "../../../services/api/AuthApi";
 import { useAuth } from "../../../Services/Context/AuthContext";
 
 const Login = () => {
@@ -51,7 +51,7 @@ const Login = () => {
             onBlur={loginFormik.handleBlur}
             />
              {loginFormik.errors.email && loginFormik.touched.email && (
-                            <span className="block text-red-300 text-xs pl-2 mt-2">{registerFormik.errors.email}</span>
+                            <span className="block text-red-300 text-xs pl-2 mt-2">{loginFormik.errors.email}</span>
                         )}
         </div>
         <div className="input-group">
@@ -65,7 +65,7 @@ const Login = () => {
             onBlur={loginFormik.handleBlur}
           />
            {loginFormik.errors.password && loginFormik.touched.password && (
-                            <span className="block text-red-300 text-xs pl-2 mt-2">{registerFormik.errors.password}</span>
+                            <span className="block text-red-300 text-xs pl-2 mt-2">{loginFormik.errors.password}</span>
                         )}
         </div>
         <button className="login-button" type="submit">Login</button>
