@@ -28,7 +28,7 @@
       "price": "85",
       "category": "Sedan",
       "description": "The Audi A6 is a premium sedan that blends sophistication with cutting-edge technology and a refined driving experience.",
-      "image": "https://cdn.motor1.com/images/mgl/Y0Jgj6/s3/audi-a6.jpg"
+      "image": "https://www.topgear.com/sites/default/files/cars-car/image/2021/08/5219-AudiUK00019837AudiA6Avant.jpg?w=1280&h=720"
     },
     {
       "id": "4",
@@ -38,7 +38,7 @@
       "price": "50",
       "category": "Truck",
       "description": "The Ford F-150 is a legendary pickup truck known for its durability, impressive towing capacity, and modern tech features.",
-      "image": "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/resources/general/new_vehicle_experience/2024/f-150/2024_Ford_F-150_Lariat.jpg"
+      "image": "https://d2v1gjawtegg5z.cloudfront.net/posts/preview_images/000/015/499/original/2024_Ford_F-150.jpg?1725030127"
     },
     {
       "id": "5",
@@ -48,7 +48,7 @@
       "price": "70",
       "category": "Convertible",
       "description": "The Porsche 911 Carrera is an iconic sports car that delivers exhilarating performance, sleek design, and top-down driving excitement.",
-      "image": "https://files.porsche.com/filestore/image/multimedia/none/992-911-carrera-modelimage-sideshot/thumbwhite/4c2d8fc6-4059-11ec-80d3-005056bbdc38.jpg"
+      "image": "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1687933390/autoexpress/2023/06/Porsche%20911%20Carrera%20T-8.jpg"
     },
     {
       "id": "6",
@@ -58,7 +58,7 @@
       "price": "60",
       "category": "Sedan",
       "description": "The Toyota Camry is a reliable and fuel-efficient sedan that offers a comfortable ride and a spacious interior for daily commutes.",
-      "image": "https://toyota.scene7.com/is/image/toyota/Camry-2021"
+      "image": "https://carwow-uk-wp-3.imgix.net/Toyota-Camry-Hybrid-Exterior-Dynamic-NOT-UK-SPEC-19.jpg"
     },
     {
       "id": "7",
@@ -68,7 +68,7 @@
       "price": "50",
       "category": "Sedan",
       "description": "The Honda Civic is a compact car that combines practicality, efficiency, and sporty handling in a stylish package.",
-      "image": "https://www.honda.com/content/dam/brand/honda/civic-sedan/2020/gallery/exterior/civic-sedan-2020-1.jpg"
+      "image": "https://autoimage.capitalone.com/cms/Auto/assets/images/2930-hero-2024-honda-civic-hatch-review-1.jpg"
     },
     {
       "id": "8",
@@ -78,7 +78,7 @@
       "price": "55",
       "category": "Truck",
       "description": "The Chevrolet Silverado is a rugged and powerful pickup truck built for heavy-duty tasks and long-haul performance.",
-      "image": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/trucks/silverado/02-images/2024-silverado-crew-cab-masthead-01.jpg"
+      "image": "https://di-uploads-development.dealerinspire.com/johnbowmanchevy/uploads/2019/10/2018-Chevy-Silverado-4.3L-V6.jpg"
     },
     {
       "id": "9",
@@ -88,7 +88,7 @@
       "price": "150",
       "category": "Sedan",
       "description": "The Tesla Model S is an all-electric sedan that offers long-range capabilities, fast acceleration, and cutting-edge autopilot features.",
-      "image": "https://tesla-cdn.thron.com/delivery/public/image/tesla/03e631dd-cb45-4f5f-aed8-0fdee7c0513b/bvlatuR/std/4096x2560/MS-Social"
+      "image": "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1689934611/autoexpress/2023/07/Tesla%20Model%20S%20Plaid%20001_yujihf.jpg"
     },
     {
       "id": "10",
@@ -98,7 +98,7 @@
       "price": "110",
       "category": "SUV",
       "description": "The Jeep Wrangler is a legendary off-road vehicle known for its rugged design, open-air freedom, and unparalleled capability.",
-      "image": "https://www.jeep.com/content/dam/fca-brands/na/jeep/en_us/2022/wrangler/vlp/desktop/2022-wrangler-vlp-desktop.jpg"
+      "image": "https://www.motortrend.com/uploads/sites/5/2017/12/2018-Jeep-Wrangler-Rubicon.jpg?w=768&width=768&q=75&format=webp"
     },
     {
       "id": "35cc",
@@ -109,6 +109,16 @@
       "category": "SUV",
       "description": "The Hyundai ix35 is a stylish and versatile compact SUV designed to deliver comfort and performance. Known for its modern aesthetics, it features sleek lines, a bold front grille, and dynamic LED headlights that give it a confident road presence.",
       "image": "https://www.netcarshow.com/Hyundai-ix35-2011-wallpaper.jpg"
+    },
+    {
+      "id": "a6ea",
+      "brand": "Ford",
+      "model": "Mustang Cabrio",
+      "year": "2021",
+      "price": "95",
+      "category": "Convertible",
+      "description": "Top down, vibes up. The 2021 Ford Mustang Cabrio brings the iconic Mustang muscle to a whole new level of freedom. With its sleek convertible design, growling engine, and eye-catching curves, this ride turns every street into a runway. Perfect for weekend getaways or coastal cruises, the Cabrio is all about bold energy and open-air adventures.",
+      "image": "https://www.tuningblog.eu/wp-content/uploads/2018/08/Peicher-Performance-Widebody-Ford-Mustang-Cabrio-Tuning-11.jpg"
     }
   ],
   "users": [

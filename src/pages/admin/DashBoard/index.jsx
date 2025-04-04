@@ -10,6 +10,9 @@ import {
   Legend,
 } from "chart.js";
 import styles from "./dashboard.module.css";
+import instance from "../../../services/api/AxiosConfig";
+import { endpoints } from "../../../services/api/Constants";
+import rentalController from "../../../services/api/RentalApi";
 
 ChartJS.register(
   CategoryScale,
@@ -31,31 +34,29 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-        setStats((prevStats) => ({
-          ...prevStats,
-          totalUsers: data.length,
-          totalBannedUsers: data.filter((user) => user.isBanned === "true")
-            .length,
-        }));
-      });
+    const fetchData = async () => {
+      try {
+        const usersData = await instance.get(endpoints.users);
+        const carsData = await instance.get(endpoints.cars);
+        const rentalsData = await rentalController.getAllRentals();
 
-    fetch("http://localhost:3000/cars")
-      .then((response) => response.json())
-      .then((data) => {
-        setCars(data);
-        setStats((prevStats) => ({
-          ...prevStats,
-          totalCars: data.length,
-        }));
-      });
+        setUsers(usersData.data);
+        setCars(carsData.data);
+        setRentals(rentalsData);
 
-    fetch("http://localhost:3000/rentals")
-      .then((response) => response.json())
-      .then((data) => setRentals(data));
+        setStats({
+          totalUsers: usersData.data.length,
+          totalBannedUsers: usersData.data.filter(
+            (user) => user.isBanned === "true"
+          ).length,
+          totalCars: carsData.data.length,
+        });
+      } catch (error) {
+        console.error("Error loading dashboard data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const getMonthlyRentalData = () => {
@@ -69,8 +70,8 @@ const Dashboard = () => {
     });
 
     const sortedMonths = Object.keys(rentalCounts).sort((a, b) => {
-      const dateA = new Date(a + " 1, 2025");
-      const dateB = new Date(b + " 1, 2025");
+      const dateA = new Date(`${a} 1, 2025`);
+      const dateB = new Date(`${b} 1, 2025`);
       return dateA - dateB;
     });
 
@@ -135,4 +136,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

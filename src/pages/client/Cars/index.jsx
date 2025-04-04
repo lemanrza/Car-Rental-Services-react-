@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import carController from "../../../services/api/CarApi";
 import "./cars.css";
 
 const Cars = () => {
@@ -8,9 +9,16 @@ const Cars = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/cars")
-            .then((response) => response.json())
-            .then((data) => setCars(data));
+        const fetchData = async () => {
+            try {
+                const carsData = await carController.getAllCar()
+                setCars(carsData)
+            }
+            catch (error) {
+                console.error("Error loading dashboard data:", error);
+            }
+        }
+        fetchData()
     }, []);
 
     const handleViewDetails = (carId) => {
@@ -41,15 +49,15 @@ const Cars = () => {
                                             </h3>
                                             <p className="mt-1 tracking-wider text-gray-900">${car.price}</p>
                                         </div>
-                                      <div className="flex flex-col justify-end gap-2">
-                                      <button
-                                            className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
-                                            onClick={() => handleViewDetails(car.id)}
-                                        >
-                                            View Details
-                                        </button>
-                                        
-                                      </div>
+                                        <div className="flex flex-col justify-end gap-2">
+                                            <button
+                                                className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
+                                                onClick={() => handleViewDetails(car.id)}
+                                            >
+                                                View Details
+                                            </button>
+
+                                        </div>
                                     </div>
                                 </div>
                             </li>

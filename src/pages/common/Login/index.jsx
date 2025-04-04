@@ -16,6 +16,7 @@ const Login = () => {
     },
     onSubmit: async(values, actions)=>{
     const response= await AuthController.login(values);
+    // console.log(values)
     if(!response.isLogged){
       window.alert(response.message)
       actions.resetForm()

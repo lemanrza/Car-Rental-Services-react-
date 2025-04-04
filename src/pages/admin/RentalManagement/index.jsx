@@ -1,12 +1,20 @@
 import { useEffect, useState } from "react";
+import rentalController from "../../../services/api/RentalApi";
 
 const RentalManagement = () => {
   const [rentals, setRentals] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/rentals")
-      .then((response) => response.json())
-      .then((data) => setRentals(data));
+    const fetchdata = async () => {
+      try {
+        const rentalsData = await rentalController.getAllRentals()
+        setRentals(rentalsData)
+      }
+      catch (error) {
+        console.error("Error: ", error)
+      }
+    }
+    fetchdata()
   }, []);
 
   const handleApprove = (rentalId) => {
